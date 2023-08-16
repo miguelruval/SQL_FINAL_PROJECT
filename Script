@@ -1,0 +1,13 @@
+SELECT
+    NAME_OF_SCHOOL,
+    COMMUNITY_AREA_NAME,
+    AVERAGE_STUDENT_ATTENDANCE
+FROM
+    chicago_public_schools
+JOIN
+    chicago_socioeconomic_data
+USING
+    (COMMUNITY_AREA_NAME)
+WHERE
+    HARDSHIP_INDEX = 98;
+
